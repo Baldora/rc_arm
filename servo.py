@@ -14,15 +14,21 @@ class Servo:
         self.data_pin = data_pin
 
         GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(data_pin, GPIO.OUT)
+        GPIO.setup(self.data_pin, GPIO.OUT)
 
-        self.pwm = GPIO.PWM(data_pin, 50)
+        self.pwm = GPIO.PWM(self.data_pin, 50)
+        self.pwm.start(0)
 
     def set_angle(self, angle:int):
         '''
         Pass an angle as an int and the servo moves to that angle
         '''
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(self.data_pin, GPIO.OUT)
+
+        print("angle is " + str(angle))
         duty = angle /18 + 2
+        print("duty is " + str(duty))
         GPIO.output(self.data_pin, True)
         self.pwm.ChangeDutyCycle(duty)
         sleep(1)
