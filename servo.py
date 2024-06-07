@@ -26,9 +26,7 @@ class Servo:
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.data_pin, GPIO.OUT)
 
-        print("angle is " + str(angle))
         duty = angle /18 + 2
-        print("duty is " + str(duty))
         GPIO.output(self.data_pin, True)
         self.pwm.ChangeDutyCycle(duty)
         sleep(1)
