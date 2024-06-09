@@ -6,7 +6,7 @@ class Servo:
     '''
     servo object controls the SG90 micro servo and handles the data pin
     '''
-    def __init__(self, data_pin:int):
+    def __init__(self, data_pin:int, ):#max_angle:int, min_angle:int):
         '''
         Setup a servo, pass the data pin as an int
         '''
@@ -18,6 +18,8 @@ class Servo:
 
         self.pwm = GPIO.PWM(self.data_pin, 50)
         self.pwm.start(0)
+        #self.max_angle = max_angle
+        #self.min_angle = min_angle
 
     def set_angle(self, angle:int):
         '''

@@ -6,8 +6,10 @@ class Arm:
     '''
     def __init__(self, vert_data_pin:int, horiz_data_pin:int):
         '''
-        on arm init sets up servo data and sets the angles to 0 and 0
+        on arm init sets up servo data and sets the angles to 90 and 90
         '''
+
+        
 
         self.vert_servo = Servo(vert_data_pin)
         self.horiz_servo = Servo(horiz_data_pin)

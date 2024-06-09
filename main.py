@@ -5,8 +5,14 @@ import RPi.GPIO as GPIO
 
 test_arm = Arm(11, 16)
 
-test_arm.vert_servo.set_angle(20)
+test_arm.set_position(50, 30)
 
-test_arm.set_position(60,150)
+#for i in range(200):
+#    print("moving to " + str(i))
+#    test_arm.horiz_servo.set_angle(i)
+#
+#    i += 1
+
+
 
 GPIO.cleanup()
