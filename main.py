@@ -1,18 +1,31 @@
 from time import sleep
 from arm import Arm
-from servo import Servo
+from data_reader import DataReader
 import RPi.GPIO as GPIO
 
-test_arm = Arm(11, 16)
+test_arm = Arm(16, 11)
+pico_data = DataReader('/dev/ttyACM0')
+loop = True
 
-for i in range(20):
-    test_arm.adjust_position(y_adjustment=5)
-    test_arm.adjust_position(x_adjustment=-5)
+while loop:
+    try:
+        cords = pico_data.get_data()
 
-    print("x: " + str(test_arm.horiz_servo.current_angle) + " y: " + str(test_arm.vert_servo.current_angle))
+        #print(cords)
+        x = int(float(cords["x"])) * 1
+        y = int(float(cords["y"])) * -1
+
+        #print("Data: x: " + str(x) + " y: " + str(y))
+
+        test_arm.adjust_position(x,y)
+
+        print("Pos: x: " + str(test_arm.horiz_servo.current_angle) + " y: " + str(test_arm.vert_servo.current_angle))
+    except:
+        loop = False
 
 
 
 
-
+print("\n\nshutdown!!!!!\n\n")
+test_arm.stop_arm()
 GPIO.cleanup()

@@ -14,7 +14,10 @@ class Arm:
 
         self.vert_servo.set_angle(90)
         self.horiz_servo.set_angle(90)
-        
+
+    def stop_arm(self):
+        self.vert_servo.pwm.stop()
+        self.horiz_servo.pwm.stop()
 
     def set_position(self, x:int, y:int):
         '''
