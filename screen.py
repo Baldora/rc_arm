@@ -19,7 +19,10 @@ class Screen:
         counter = 0
 
         for line in display_text:
-            self.display.text(line , 0, counter*10)
+            display_line = counter * 10
+            self.display.text(line , 0, display_line)
+
+            counter += 1
 
         self.display.show()
         self.display.fill(0)

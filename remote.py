@@ -18,14 +18,23 @@ class Remote:
 
         accel_data = self.accelerometer.get_data()
 
-        for data in accel_data:
-            if data < 0 and data > self.deadzone * -1:
-                data = 0
-            if data > 0 and data < self.deadzone:
-                data = 0
+        self.x = self.deadzone_adjust(accel_data[0])
+        self.y = self.deadzone_adjust(accel_data[1])
 
-        self.x = accel_data[0]
-        self.y = accel_data[1]
+    def deadzone_adjust(self, cord):
+
+        if cord < 0 and cord > self.deadzone * -1:
+            cord = 0
+        elif cord > 0 and cord < self.deadzone:
+            cord = 0
+        elif cord > 0:
+            cord -= self.deadzone
+        else:
+            cord += self.deadzone
+
+        return cord
+            
+
 
     def update_data_display(self):
 
