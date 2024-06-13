@@ -1,5 +1,5 @@
 from machine import Pin, SoftI2C
-import ssd1306
+from libary import ssd1306
 from time import sleep_ms
 
 class Screen:

@@ -1,4 +1,4 @@
-from MPU6050 import MPU6050
+from libary.MPU6050 import MPU6050
 
 class Accelerometer:
 
