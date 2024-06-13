@@ -12,8 +12,8 @@ while loop:
         cords = pico_data.get_data()
 
         #print(cords)
-        x = int(float(cords["x"])) * 1
-        y = int(float(cords["y"])) * -1
+        x = int(float(cords["x"]) * 3) 
+        y = int(float(cords["y"]) * -3) 
 
         #print("Data: x: " + str(x) + " y: " + str(y))
 

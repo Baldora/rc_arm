@@ -35,13 +35,11 @@ class Servo:
         #set the current_angle
         self.current_angle = angle
 
-        
-
         #set the servo to the angle
         duty = angle /18 + 2
         GPIO.output(self.data_pin, True)
         self.pwm.ChangeDutyCycle(duty)
-        sleep(0.1)
+        #sleep(0.5)
         GPIO.output(self.data_pin, False)
         self.pwm.ChangeDutyCycle(duty)
 
