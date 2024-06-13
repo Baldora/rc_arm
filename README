@@ -6,13 +6,9 @@ Install the ‘Pico W’ file on the Pico W and run ‘main’.
 
 All files are required on the relevant device for the project to run. 
 
-
 It should include a demo video or GIF showcasing the project's functionality.
 
-
-The README should also mention the external libraries used, their licenses, and provide a link to the project's license.
-
-micropython-adafruit-ssd1306/ssd1306.py licence: 
+micropython-adafruit-ssd1306/ssd1306.py licence: https://github.com/adafruit/micropython-adafruit-ssd1306/blob/master/LICENSE
 
 MIT License
 
@@ -24,7 +20,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-nickcoutsos/MPU-6050-Python licence:
+nickcoutsos/MPU-6050-Python licence: https://github.com/nickcoutsos/MPU-6050-Python/blob/master/LICENSE
 
 The MIT License (MIT)
 
@@ -37,7 +33,9 @@ copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Project licence:
+Project licence: https://github.com/Baldora/rc_arm/blob/main/LICENSE
+
+The MIT License (MIT)
 
 Copyright 2024 Jacob Carr
 
