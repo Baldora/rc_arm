@@ -6,8 +6,6 @@ Install the ‘Pico W’ file on the Pico W and run ‘main’.
 
 All files are required on the relevant device for the project to run. 
 
-It should include a demo video or GIF showcasing the project's functionality.
-
 micropython-adafruit-ssd1306/ssd1306.py licence: https://github.com/adafruit/micropython-adafruit-ssd1306/blob/master/LICENSE
 
 MIT License
